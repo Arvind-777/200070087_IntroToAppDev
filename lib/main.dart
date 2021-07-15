@@ -25,10 +25,11 @@ class _CalculatorState extends State<Calculator> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home:Scaffold(
-        backgroundColor: Colors.amberAccent,
+        backgroundColor: Colors.white38,
         appBar: AppBar(
           title: Text("Calculator"),
           centerTitle: true,
+          backgroundColor: Colors.blueGrey,
         ),
         body: Container(
           child: Column(
@@ -38,9 +39,8 @@ class _CalculatorState extends State<Calculator> {
                 children: <Widget>[
                   Expanded(
                       child:Container(
-                          child: Text("$expression", textAlign: TextAlign.end, style: TextStyle(fontSize: 30)),
+                          child: Text("$expression", textAlign: TextAlign.end, style: TextStyle(fontSize: 30 , color: Colors.white)),
                           padding: EdgeInsets.symmetric( vertical:btnPadding),
-                          color: Colors.amberAccent
                       )
                   )
                 ],
@@ -49,13 +49,12 @@ class _CalculatorState extends State<Calculator> {
                 children: <Widget>[
                   Expanded(
                     child:Container(
-                      child: Text("$answer", textAlign: TextAlign.end,style: TextStyle(fontSize: 30)),
+                      child: Text("$answer", textAlign: TextAlign.end,style: TextStyle(fontSize: 30, color: Colors.white)),
                       padding: EdgeInsets.symmetric( vertical:btnPadding),
                       decoration: BoxDecoration(
                         border: Border.all(
                             color:bordColor
                         ),
-                        color: Colors.amberAccent
                       )
                   )
                   )
@@ -67,7 +66,7 @@ class _CalculatorState extends State<Calculator> {
                     child: InkWell(
                       onTap: (){
                         setState(() {
-                          expression = expression + "1";
+                          if(expression.length<22)expression = expression + "1";
                         });
                       },
                       child: Ink(
@@ -86,7 +85,7 @@ class _CalculatorState extends State<Calculator> {
                     child: InkWell(
                       onTap: (){
                         setState(() {
-                          expression = expression + "2";
+                          if(expression.length<22)expression = expression + "2";
                         });
                       },
                       child: Ink(
@@ -105,7 +104,7 @@ class _CalculatorState extends State<Calculator> {
                     child: InkWell(
                       onTap: (){
                         setState(() {
-                          expression = expression + "3";
+                          if(expression.length<22)expression = expression + "3";
                         });
                       },
                       child: Ink(
@@ -124,7 +123,7 @@ class _CalculatorState extends State<Calculator> {
                     child: InkWell(
                       onTap: (){
                         setState(() {
-                          expression = expression + "/";
+                          if(expression.length<22)expression = expression + "/";
                         });
                       },
                       child: Ink(
@@ -147,7 +146,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "4";
+                            if(expression.length<22)expression = expression + "4";
                           });
                         },
                         child: Ink(
@@ -166,7 +165,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "5";
+                            if(expression.length<22)expression = expression + "5";
                           });
                         },
                         child: Ink(
@@ -185,7 +184,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "6";
+                            if(expression.length<22)expression = expression + "6";
                           });
                         },
                         child: Ink(
@@ -204,7 +203,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "x";
+                            if(expression.length<22)expression = expression + "x";
                           });
                         },
                         child: Ink(
@@ -227,7 +226,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "7";
+                            if(expression.length<22)expression = expression + "7";
                           });
                         },
                         child: Ink(
@@ -246,7 +245,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "8";
+                            if(expression.length<22)expression = expression + "8";
                           });
                         },
                         child: Ink(
@@ -265,7 +264,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "9";
+                            if(expression.length<22)expression = expression + "9";
                           });
                         },
                         child: Ink(
@@ -284,7 +283,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "-";
+                            if(expression.length<22)expression = expression + "-";
                           });
                         },
                         child: Ink(
@@ -307,7 +306,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                          expression = expression + ".";
+                            if(expression.length<22)expression = expression + ".";
                         });},
                         child: Ink(
                           child: Text(".", textAlign: TextAlign.center,),
@@ -325,7 +324,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "0";
+                            if(expression.length<22)expression = expression + "0";
                           });
                         },
                         child: Ink(
@@ -344,7 +343,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "00";
+                            if(expression.length<22)expression = expression + "00";
                           });
                         },
                         child: Ink(
@@ -363,7 +362,7 @@ class _CalculatorState extends State<Calculator> {
                       child: InkWell(
                         onTap: (){
                           setState(() {
-                            expression = expression + "+";
+                            if(expression.length<22)expression = expression + "+";
                           });
                         },
                         child: Ink(
