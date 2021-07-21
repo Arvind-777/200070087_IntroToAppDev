@@ -133,7 +133,7 @@ class _QuizAppState extends State<QuizApp> {
                   }
 
                   if(index == questionBank.length - 1){
-                    statement = "THE END";
+                    statement = "GAME OVER";
                   }
                   else{
                     index+=1;
